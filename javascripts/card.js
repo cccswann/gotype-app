@@ -17,7 +17,7 @@ class Card {
     cardStore.push(this)
 }
 
-static getCard(){
+static getCards(){
     fetch('http://localhost:3000/api/v1/cards')
     .then(response => response.json())
     .then(data => {
