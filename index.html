@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>typings</title>
-    <meta name="description" content="GoType is a Japanese typing test website. It features popular anime lines." />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <link id="theme" rel="stylesheet" href="stylesheets/light.css" />
+    <title>GoType</title>
+    <link rel="stylesheet" href="style.css" />
+    <link id="deck" rel="stylesheet" href="decks/light.css" />
   </head>
   <body>
     <h2 id="header">GoType</h2>
@@ -20,10 +19,6 @@
             <span id="wc-25" onclick="setWordCount(25)">25</span>
             <text> / </text>
             <span id="wc-50" onclick="setWordCount(50)">50</span>
-            <text> / </text>
-            <span id="wc-100" onclick="setWordCount(100)">100</span>
-            <text> / </text>
-            <span id="wc-250" onclick="setWordCount(250)">250</span>
           </span>
           <span id="time-count">
             <span id="tc-15" onclick="setTimeCount(15)">15</span>
@@ -43,20 +38,25 @@
         <div id="text-display"></div>
         <div class="bar">
           <input id="input-field" type="text" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" tabindex="1"/>
-          <button id="redo-button" onclick="setText(event)" tabindex="2">redo</button>
+          <button id="redo-button" onclick="setText(event)" tabindex="2">replay</button>
         </div>
       </div>
     </div>
-    <div id="theme-center" class="hidden">
-      <div id="left-wing" onClick="hideThemeCenter();">< back</div>
-      <div id="theme-area"></div>
+    <div id="deck-center" class="hidden">
+      <div id="left-wing" onClick="hideDeckCenter();">< back</div>
+      <div id="deck-area"></div>
+    </div>
+    <div id="score-center" class="hidden">
+      <div id="left-wing" onClick="hideScoreCenter();">< back</div>
+      <div id="score-area"></div>
     </div>
     <div id="footer">
-      <a href="https://github.com/briano1905/typings#typings" target="_blank" tabindex="3">About</a>/
-      <div id="show-themes"class="button" onClick="showThemeCenter();" tabindex="4">Decks</div>
+      <a href="https://github.com/cccswann/gotype-app" target="_blank" tabindex="3">About</a>||
+      <div id="show-decks"class="button" onClick="showDeckCenter();" tabindex="4">Decks</div>||
+      <div id="show-scores"class="button" onClick="showScoreCenter();" tabindex="5">Scores</div>
     </div>
-    <script src="javascripts/card.js"></script>
-    <script src="javascripts/deck.js"></script>
-    <script src="javascripts/index.js"></script>
+    <script src="user.js"></script>
+    <script src="score.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
